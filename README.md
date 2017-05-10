@@ -1,7 +1,9 @@
 # generatorkata
 A kata focused on learning Python Generators
 
-This kata makes use of phone_data_10000.txt from the [Phone Numbers Kata](https://github.com/emilybache/Phone-Numbers-Kata) found in the ["The Coding Dojo Handbook"](http://leanpub.com/codingdojohandbook) by Emily Bache.
+## Credits
+
+This kata makes use of the file `phone_data_10000.txt` from the [Phone Numbers Kata](https://github.com/emilybache/Phone-Numbers-Kata) also found in the ["The Coding Dojo Handbook"](http://leanpub.com/codingdojohandbook) by Emily Bache.
 
 ## Prerequisites
 
@@ -57,11 +59,11 @@ Write a generator function, gen_open, that opens a file and yields all lines.
 
 ### Step 4
 
-Combine generator functions in step 1, 2 and 3 to print out all "pure" phone numbers from phone_data_10000.txt where the last name contains character "b"
+Combine generator functions in step 1, 2 and 3 to print out all "pure" phone numbers from `phone_data_10000.txt where the last name contains character "b"
 
 ### Step 5
 
-Modify the generator function in step 2 to let the client change what character to search for each time the generator is resumed using the send method.
+Modify the generator function in step 2 to let the generator client change what character to search for each time the generator is resumed using the send method.
 
 Example:
 
@@ -80,11 +82,22 @@ Should yield:
 
     Adena Helble,0163 2783782
     Bret Pistole,083-018-52-62
+    <raises StopIteration> since no name with "x" found
 
 ### Step 6
 
 Write a generator function similar to the one in step 1. But instead of removing all spaces and dashes it inserts a dash after every third character.
 
+Input list/iterator:
+
+    Silas Scarth,0394 012-5-02
+    Micheal Veronesi,01725 30 75
+
+Generator function yields:
+
+    Silas Scarth,039-401-250-2
+    Micheal Veronesi,017-253-075
+
 ### Step 7
 
-Use the generator functions in step 1 and step 6 as sub generators and switch between them depending on start value passed to the parent generator.
+Use the generator functions in step 1 and step 6 as sub generators (by using `yield from`) and switch between them depending on start value passed to the parent generator.
