@@ -5,7 +5,7 @@ This kata makes use of phone_data_10000.txt from the [Phone Numbers Kata](https:
 
 ## How to run tests using pytest
 
-$ pytest test_generatorkata.py -v
+    $ pytest test_generatorkata.py -v
 
 ## Exercises
 
@@ -16,28 +16,31 @@ Write a generator function that given a list of names and phone numbers generate
 Example:
 
 Input list/iterator:
-Silas Scarth,0394 012-5-02
-Micheal Veronesi,01725 30 75
-Blythe Milby,0027360 8 81
+
+    Silas Scarth,0394 012-5-02
+    Micheal Veronesi,01725 30 75
+    Blythe Milby,0027360 8 81
 
 Generator function yields:
-Silas Scarth,0394012502
-Micheal Veronesi,017253075
-Blythe Milby,0027360881
+
+    Silas Scarth,0394012502
+    Micheal Veronesi,017253075
+    Blythe Milby,0027360881
 
 ### Step 2
 
-Write a generator function that given a list of names and phone numbers only yields
-those lines where the last name contains character "b"
+Write a generator function that given a list of names and phone numbers only yields those lines where the last name contains character "b"
 
 Example:
 
 Input list/iterator:
-Adena Helble,0163 2783782
-Elda Keough,0560397-05-82
+
+    Adena Helble,0163 2783782
+    Elda Keough,0560397-05-82
 
 Generator function yields:
-Adena Helble,0163 2783782
+
+    Adena Helble,0163 2783782
 
 ### Step 3
 
@@ -52,19 +55,22 @@ Combine generator functions in step 1, 2 and 3 to print out all "pure" phone num
 Modify the generator function in step 2 to let the client change what character to search for each time the generator is resumed using the send method.
 
 Example:
-Adena Helble,0163 2783782
-Elda Keough,0560397-05-82
-Bret Pistole,083-018-52-62
-Elfreda Capron,01780 47 57
+
+    Adena Helble,0163 2783782
+    Elda Keough,0560397-05-82
+    Bret Pistole,083-018-52-62
+    Elfreda Capron,01780 47 57
 
 Generator client:
-g_it = generator()
-print(g_it.send("i")
-print(g_it.send("x")
+
+    g_it = generator()
+    print(g_it.send("i")
+    print(g_it.send("x")
 
 Should yield:
-Adena Helble,0163 2783782
-Bret Pistole,083-018-52-62
+
+    Adena Helble,0163 2783782
+    Bret Pistole,083-018-52-62
 
 ### Step 6
 
