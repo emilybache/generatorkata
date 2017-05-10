@@ -3,7 +3,16 @@ A kata focused on learning Python Generators
 
 This kata makes use of phone_data_10000.txt from the [Phone Numbers Kata](https://github.com/emilybache/Phone-Numbers-Kata) found in the ["The Coding Dojo Handbook"](http://leanpub.com/codingdojohandbook) by Emily Bache.
 
-## How to run tests using pytest
+## Prerequisites
+
+* Python >= 3.3
+* [PyTest](https://docs.pytest.org/en/latest/)
+
+## Test Driven Development
+
+Write unit tests in `test_generatorkata.py` for each step below in  corresponding implementation code in `generatorkata.py`.
+
+## How to run tests
 
     $ pytest test_generatorkata.py -v
 
